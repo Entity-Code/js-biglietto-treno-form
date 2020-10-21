@@ -10,7 +10,7 @@
 
    //biglietto
    var biglietto = document.getElementById("biglietto");
-   
+
    // EVENTI
       // Genera
       var genera = document.getElementById("genera");
@@ -25,14 +25,18 @@
    	   }
       );
 
-      // Annulla
+      // Annulla (reset form)
       var annulla = document.getElementById("annulla");
-      genera.addEventListener("click",
+      annulla.addEventListener("click",
    	  function() {
+           // reset
+           document.getElementById("form").reset();
            // display biglietto off
            biglietto.className = "dNone";
    	   }
       );
+
+
 
 
 // prezzo biglietto
@@ -52,7 +56,7 @@
 
 
 // OUTPUT
-
+nomeCognome.innerHTML = nomeCognome; //non ho capito come far uscire il nome inserito nell'input nell'id nomeCognomeB all'interno del biglietto
 
 
 
