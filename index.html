@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>TreniMattItalia2</title>
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+      <!-- total container -->
+      <div class="total-container">
+         <!-- container top -->
+         <div class="container-top">
+            <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+            <div class="container-top-in">
+               <div class="container-form">
+                  <form id="form" action="index.html" method="post">
+                     <div class="flex">
+                        <!-- Nome e cognome -->
+                        <div class="container-nome b ">
+                           <h4>Nome e cognome</h4>
+                           <input id="nomeCognome" type="text">
+                        </div>
+                        <!-- Km da percorrere -->
+                        <div class="container-km b">
+                           <h4>Km da percorrere</h4>
+                           <input id="km" type="text">
+                        </div>
+                        <!-- Fascia d'età -->
+                        <div class="container-eta b">
+                           <h4>Fascia d'età</h4>
+                           <select id="eta" class="" name="" value="">
+                              <option id="minorenne" value="">Minorenne</option>
+                              <option id="maggiorenne" value="">Maggiorenne</option>
+                              <option id="over65" value="">Over 65</option>
+                           </select>
+                        </div>
+                     </div>
+                        <!-- GENERA / ANNULLA -->
+                        <div class="buttons">
+                           <input type="submit" name="" value="Genera">
+                           <input type="submit" name="" value="Annulla">
+                        </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+         <!-- container top -->
+
+         <!-- container bot -->
+         <div id="biglietto" class="container-bot">
+            <h1>IL TUO BIGLIETTO</h1>
+            <div class="container-bot-in">
+               <div class="container-bot-in-2">
+                  <h3>DETTAGLIO PASSEGGERI</h3>
+                  <div class="container-biglietto">
+                     <!-- NOME PASSEGGERO -->
+                     <div class="box">
+                        <h2>NOME PASSEGGERO :</h2>
+                        <!-- output nome e cognome biglietto -->
+                        <h2 id="nomeCognomeB">Mattia Tummolillo</h2>
+                     </div>
+                     <!-- OFFERTA -->
+                     <div class="box others">
+                        <h2>Offerta</h2>
+                        <!-- output nome tipo sconto-->
+                        <h2>Sconto Minorenne</h2>
+                     </div>
+                     <!-- Carrezza -->
+                     <div class="box others">
+                        <h2>Carrozza</h2>
+                        <!-- output random 0-10 -->
+                        <h2>7</h2>
+                     </div>
+                     <!-- CODICE CP -->
+                     <div class="box others">
+                        <h2>Codice CP</h2>
+                        <!-- output random 90000-100000 -->
+                        <h2>97928</h2>
+                     </div>
+                     <!-- COSTO BIGLIETTO -->
+                     <div class="box others">
+                        <h2>Costo biglietto</h2>
+                        <!-- output costo biglietto finale -->
+                        <h2>3.36€</h2>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+         <!-- container bot -->
+      </div>
+      <!-- total container -->
+
+
+      <script src="js/script.js" charset="utf-8"></script>
+   </body>
+</html>
