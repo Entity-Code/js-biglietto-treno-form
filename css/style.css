@@ -162,11 +162,23 @@ button{
    font-weight: normal;
 }
 
-/* Classi js */
-.dNone{
-   display: none;
+
+#biglietto.show {
+  -webkit-animation: in 700ms ease both;
+  animation: in 700ms ease both;
 }
 
-.dBlock{
-   display: block;
+#biglietto.hide {
+  -webkit-animation: out 700ms ease both;
+  animation: out 700ms ease both;
+}
+
+@-webkit-keyframes in {
+  0% { -webkit-transform: scale(0) rotate(12deg); opacity: 0; visibility: hidden;  }
+  100% { -webkit-transform: scale(1) rotate(0); opacity: 1; visibility: visible; }
+}
+
+@keyframes in {
+  0% { transform: scale(0) rotate(12deg); opacity: 0; visibility: hidden;  }
+  100% { transform: scale(1) rotate(0); opacity: 1; visibility: visible; }
 }

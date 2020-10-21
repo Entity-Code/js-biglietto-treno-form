@@ -1,17 +1,25 @@
-// INPUT
-   // DICHIARAZIONI VARIABILI GLOBALI
-
-   //biglietto
-   var biglietto = document.getElementById("biglietto");
-
    // EVENTI
       // OUTPUT
-      // Genera
+      // biglietto
+      var biglietto = document.getElementById("biglietto");
+      // Bottone genera
       var genera = document.getElementById("genera");
+
+      // inizio evento click
+      // effetto
       genera.addEventListener("click",
    	  function() {
+
+           biglietto.className = biglietto.className !== "show" ? "show" : "hide";
+           if (biglietto.className === "show") {
+              setTimeout(function(){
+                 biglietto.style.display = "block";
+              },0); // timed to occur immediately
+           }
+         // effetto
+
            // display block biglietto anteprima
-           biglietto.className = "dBlock";
+           // biglietto.className = "dBlock";
 
            // DICHIARAZIONE VARIABILI
             // richiesta numero kilometri
@@ -39,6 +47,7 @@
              tipoSconto.value = ("Nessuno sconto applicato");
           }
 
+
           // output tipo di sconto
           document.getElementById("tipoSconto").innerHTML = tipoSconto.value;
           // output costo biglietto
@@ -53,6 +62,7 @@
           document.getElementById("codiceCP").innerHTML = numeroCP;
    	   }
       );
+      // fine evento click
 
       // Annulla (reset form)
       var annulla = document.getElementById("annulla");
@@ -61,6 +71,6 @@
            // reset
            document.getElementById("form").reset();
            // display biglietto off
-           biglietto.className = "dNone";
+           biglietto.style.display = "none";
    	   }
       );
