@@ -56,7 +56,7 @@
 
 
 // OUTPUT
-nomeCognome.innerHTML = nomeCognome; //non ho capito come far uscire il nome inserito nell'input nell'id nomeCognomeB all'interno del biglietto
+document.getElementById("nomeCognomeB").innerHTML = nomeCognome.value; //non ho capito come far uscire il nome inserito nell'input nell'id nomeCognomeB all'interno del biglietto
 
 
 
