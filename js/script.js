@@ -8,7 +8,9 @@
    // richiesta numero età
    var numeroEta = document.getElementById("numeroEta");
 
-
+   //biglietto
+   var biglietto = document.getElementById("biglietto");
+   
    // EVENTI
       // Genera
       var genera = document.getElementById("genera");
@@ -18,8 +20,6 @@
           console.log(("Numero km : "), numeroKm.value);
           console.log(("Numero età : "), numeroEta.value);
 
-          //biglietto
-          var biglietto = document.getElementById("biglietto");
           // display biglietto on
           biglietto.className = "dBlock";
    	   }
