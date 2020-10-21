@@ -64,7 +64,7 @@ h1{
 }
 .b > h4{
    color: #a58429;
-   font-size: 18px;
+   font-size: 16.5px;
    font-weight: normal;
    padding-bottom: 18px;
 }
@@ -74,7 +74,7 @@ h1{
    text-align: center;
 }
 
-input, select{
+input, button{
    outline: none;
    padding: 5px;
    border-radius: 10px;
@@ -82,9 +82,16 @@ input, select{
    text-align: center;
 }
 
-.container-km{
-   margin-left: 32px;
+button{
+   cursor: pointer;
 }
+
+.b > button, input {
+   width: 80%;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
 
 .buttons{
    text-align: center;
@@ -99,7 +106,15 @@ input, select{
    border-radius: 10px;
    color: white;
 }
-.buttons > input:hover{
+
+.buttons > button{
+   padding: 8px 15px;
+   margin: 0 10px;
+   background-color: #a58429;
+   border-radius: 10px;
+   color: white;
+}
+.buttons > button:hover{
    background-color: lightgray;
    color: black;
    border: 2px solid black;
@@ -145,4 +160,13 @@ input, select{
 
 .others > h2:nth-child(2){
    font-weight: normal;
+}
+
+/* Classi js */
+.dNone{
+   display: none;
+}
+
+.dBlock{
+   display: block;
 }
