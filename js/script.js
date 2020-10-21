@@ -1,39 +1,40 @@
-   // EVENTI
-      // OUTPUT
+
+   // DICHIARAZIONE VARIABILI GLOBALI
       // biglietto
       var biglietto = document.getElementById("biglietto");
       // Bottone genera
       var genera = document.getElementById("genera");
 
-      // inizio evento click
-      // effetto
+      // INIZIO EVENTO CLICK (GENERA)
       genera.addEventListener("click",
    	  function() {
-
+         // effetto
            biglietto.className = biglietto.className !== "show" ? "show" : "hide";
            if (biglietto.className === "show") {
               setTimeout(function(){
+                 // display biglietto on
                  biglietto.style.display = "block";
               },0); // timed to occur immediately
            }
          // effetto
 
-           // display block biglietto anteprima
-           // biglietto.className = "dBlock";
-
-           // DICHIARAZIONE VARIABILI
+           // DICHIARAZIONE VARIABILI INTERNE (INPUT)
             // richiesta numero kilometri
             var numeroKm = document.getElementById("numeroKm");
             // richiesta nome e cognome
             var nomeCognome = document.getElementById("nomeCognome");
             // richiesta numero età
             var numeroEta = document.getElementById("numeroEta");
+            // %sconto
             var sconto;
+            //Tipologia sconto (Minorenne, Maggiorenne oppure Over 65)
             var tipoSconto = document.getElementById("tipoSconto");
-            var prezzoFinale;
+            // prezzo biglietto senza sconti
             var prezzoBiglietto = (0.21 * numeroKm.value).toFixed(2);
+            // prezzo finale (scontato o non)
+            var prezzoFinale;
 
-            // CALCOLO SCONTI E PREZZO FINALE
+            // CALCOLO SCONTI, TIPOLOGIA E PREZZO FINALE
            if (numeroEta.value < 18) { // sconto under 18
              sconto = (prezzoBiglietto / 100) * 20; //sconto minorenni del 20%
              prezzoFinale = (prezzoBiglietto - sconto).toFixed(2) + (" €") + (" (-20%)");
@@ -47,7 +48,7 @@
              tipoSconto.value = ("Nessuno sconto applicato");
           }
 
-
+         // OUTPUT
           // output tipo di sconto
           document.getElementById("tipoSconto").innerHTML = tipoSconto.value;
           // output costo biglietto
@@ -55,22 +56,24 @@
           // output nome e cognome
           document.getElementById("nomeCognomeB").innerHTML = nomeCognome.value;
           // output numero carrozza
-           var numeroCarrozza = Math.floor(Math.random()*10);
+           var numeroCarrozza = Math.floor(Math.random()*10) + 1;
            document.getElementById("numeroCarrozza").innerHTML = numeroCarrozza;
           // output codice CP
           var numeroCP = 90000 + (Math.floor(Math.random()*10000));
           document.getElementById("codiceCP").innerHTML = numeroCP;
    	   }
       );
-      // fine evento click
+      // FINE EVENTO CLICK (GENERA)
 
+      // INIZIO EVENTO CLICK ANNULLA
       // Annulla (reset form)
       var annulla = document.getElementById("annulla");
       annulla.addEventListener("click",
    	  function() {
-           // reset
+           // reset del form
            document.getElementById("form").reset();
            // display biglietto off
            biglietto.style.display = "none";
    	   }
       );
+      // FINE EVENTO CLICK ANNULLA
