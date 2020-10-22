@@ -8,12 +8,9 @@ var genera = document.getElementById("genera");
 genera.addEventListener("click",
   function() {
    // effetto
-     biglietto.className = biglietto.className !== "show" ? "show" : "hide";
-     if (biglietto.className === "show") {
-        setTimeout(function(){
-           // display biglietto on
-           biglietto.style.display = "block";
-        },0); // timed to occur immediately
+     biglietto.className = "show";
+     if (biglietto.className === "show") {       
+         biglietto.style.display = "block";
      }
    // effetto
 

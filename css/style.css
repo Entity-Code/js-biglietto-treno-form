@@ -29,6 +29,7 @@ h1{
    margin-bottom: 50px;
    margin-top: 25px;
 }
+
 .container-top > h1{
    margin-bottom: 20px;
 }
@@ -41,7 +42,6 @@ h1{
 .container-top-in{
    border-radius: 15px;
 }
-
 
 
 /* top */
@@ -91,7 +91,6 @@ button{
    padding-left: 10px;
    padding-right: 10px;
 }
-
 
 .buttons{
    text-align: center;
@@ -162,15 +161,9 @@ button{
    font-weight: normal;
 }
 
-
 #biglietto.show {
   -webkit-animation: in 700ms ease both;
   animation: in 700ms ease both;
-}
-
-#biglietto.hide {
-  -webkit-animation: out 700ms ease both;
-  animation: out 700ms ease both;
 }
 
 @-webkit-keyframes in {
